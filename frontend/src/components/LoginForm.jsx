@@ -1,7 +1,8 @@
 import { useState } from "react";
 import API from "../api";
-
+import { useNavigate } from "react-router-dom";
 export default function LoginForm({ role }) {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -17,16 +18,16 @@ export default function LoginForm({ role }) {
 
       switch (role) {
         case "admin":
-          window.location.href = "/dashboard/admin";
+          navigate("/dashboard/admin");
           break;
         case "citypartner":
-          window.location.href = "/dashboard/citypartner";
+          navigate("/dashboard/citypartner");
           break;
         case "supportstaff":
-          window.location.href = "/dashboard/supportstaff";
+          navigate("/dashboard/supportstaff");
           break;
         case "marketingteam":
-          window.location.href = "/dashboard/marketingteam";
+          navigate("/dashboard/marketingteam");
           break;
         default:
           window.location.href = "/";
