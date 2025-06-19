@@ -48,7 +48,13 @@ export default function AdminDashboard() {
             </button>
           </div>
         </div>
-
+        <div className="absolute top-4 right-4">
+        <Link to="/" >
+            <button className="px-6 py-2 bg-indigo-600 hover:bg-red-400 rounded-lg text-white text-xl font-semibold shadow-md transition duration-300 transform hover:scale-3d  cursor-pointer">
+              Logout
+            </button>
+          </Link>
+        </div>
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <Card

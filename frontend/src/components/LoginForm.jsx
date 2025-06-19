@@ -14,7 +14,7 @@ export default function LoginForm({ role }) {
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("role", res.data.role);
 
-      alert("Login success!");
+     
 
       switch (role) {
         case "admin":
